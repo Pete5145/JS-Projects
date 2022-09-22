@@ -1,0 +1,78 @@
+:root {
+    --primary-color: #000;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh;
+}
+
+button {
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    background-color: white;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 18px;
+    height: 30px;
+    width: 60px;
+}
+
+button:hover {
+    border: 2px solid white;
+    background-color: var(--primary-color);
+    color: white;
+    transition-duration: .5s;
+}
+
+.value-section {
+    display: flex;
+   
+}
+
+input {   
+    min-width: 50vh;
+    font-size: 30px;
+}
+
+#copy {
+    background-color:rgb(195, 5, 5);
+    color: white;
+    padding: 0 15px;
+    display: flex;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 765px) {
+    input {
+        font-size: 20px;
+    }
+
+    button {
+        height: 40px;
+        width: 80px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .value-section {
+            width: 100%;
+        }
+}

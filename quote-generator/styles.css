@@ -1,0 +1,150 @@
+:root {
+    --primary-font: 'Playfair Display',
+        serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+}
+
+.home {
+    height: 100vh;
+    position: relative;
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left : 0;
+    bottom : 0;
+    right: 0;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.6)
+}
+
+.quote-box {
+    width: 60%;
+    min-height: 300px;
+    position: absolute;
+    top: 25%;
+    z-index: 3;
+    left: 20%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px black;
+    backdrop-filter: blur(0.9px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px 50px;
+}
+
+i {
+    color: white;
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.quote {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.author {
+    color: white;
+    font-size: 1.3rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.btn-group {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.btn-group #tweet-btn {
+    background-color: #8dfa56;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.btn-group #tweet-btn i {
+    color: #1a8cff;
+}
+
+#tweet-btn .fa-twitter {
+    color: black;
+    font-size: 1.3rem;
+}
+
+.btn-group #quote-btn {
+    background-color: #8dfa56;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.btn-group #quote-btn:hover {
+    background-color: #99ff66;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1132px) {
+    .quote-box {
+        top: 15%;
+    }
+    i {
+        font-size: 1.5rem;
+    }
+    .quote {
+        font-size: 1.2rem;
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 544px) {
+    video {
+        min-height: 100vh;
+    }
+    .overlay {
+        min-height: 100vh;
+    }
+    .quote-box {
+        left: 2%;
+        top: 30%;
+        padding: 10px 30px;
+        width: 95%;
+    }
+    .author {
+        font-size: 1.2rem;
+    }
+
+    .btn-group {
+        margin-top:10px
+    }
+
+    #quote-btn {
+        padding: 10px 40px;
+    }
+}

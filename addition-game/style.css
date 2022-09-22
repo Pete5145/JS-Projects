@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.container {
+    width: 50%;
+    border-radius: 5px;
+    height: 250px;
+    bbackground-color: #85FFBD;
+        background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}
+
+.canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#title {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 30px;
+}
+
+.input-sec {
+    display: flex;
+    align-items: center;
+}
+
+#primary-number, #secondary-number {
+    margin: 15px;
+    height: 60px;
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    width: 70px;   
+}
+
+#primary-number {
+    border: 5px dotted red;
+}
+
+#secondary-number {
+    border: 5px dotted green;
+}
+
+#add, #equal {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+#guess {
+    margin: 0 20px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* input[type=number] {
+    -webkit-appearance: textfield;
+} */
+
+#guess::placeholder {
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#check {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(14, 174, 87, 1) 0%, rgba(12, 116, 117, 1) 90%);
+    padding: 8px 30px;
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    margin: 30px auto;
+}
+
+.result p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1216px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 774px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 90%;
+    }
+    .canvas {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .container {
+        height: 95vh;
+        width: 100vw;
+        padding-top: 80px;
+    }
+
+    .result {
+        justify-content: space-around;
+    }
+
+    .result p {
+        font-size: 1.3rem;
+    }
+    
+    #check {
+        margin-top: 30px;
+    }
+
+    #guess {
+        height: 50px;
+    }
+}

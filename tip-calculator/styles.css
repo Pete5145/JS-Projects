@@ -1,0 +1,76 @@
+:root {
+    --primary-color: rgb(127, 248, 127);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(1, 1, 46);
+}
+
+#box {
+    margin-top: 50px;
+    /* margin-left: -60px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    flex-direction: column;
+}
+
+#title {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+input[type=text] {
+    border: none;
+    height: 20px;
+    background-color: rgb(1, 1, 46);
+    outline: none;
+    font-size: 2rem;
+    padding: 20px 0;
+    color: grey;
+    width: 100%;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+p {
+    color: var(--primary-color);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.bill, .tip, .tip-amount {
+    margin-bottom: 40px;
+}
+
+.btns {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+button {
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 40px;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+/* Media Queries*/
+@media screen and (max-width:430px) {
+    #box {
+        margin: 30px 20px;
+    }
+}

@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    background: url(./images/faq.jpg) no-repeat center center/cover; 
+}
+
+.accordion {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 30px;
+    width: 500px;
+}
+
+.accordion .title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.accordion .content-container .question {
+    border-bottom: 2px solid black;
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion .content-container .question p {
+    font-size: 1.3rem;
+    color: blue;
+    font-weight: bold;
+}
+
+.accordion .content-container .question i {
+    font-size: 1.5rem;
+    color: blue;
+    transition: .5s;
+}
+
+.accordion .content-container .answer {
+    height: 0px;
+    padding-top: 10px;
+    overflow: hidden;
+    line-height: 1.5;
+    width: 100%;
+    transition: .5s;
+    font-size: 18px;
+}
+
+/* javascript styling */
+.accordion .content-container.active .answer {
+    height: 90px;
+}
+.accordion .content-container.active .question p{
+    font-size: 18px;
+    transition: .5s;
+}
+.accordion .content-container.active .question i {
+    font-size: 1.3rem;
+    transition: .5s;
+}
+
+/* Media Queries*/
+@media screen and (max-width: 520px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    .accordion {
+        margin: 0 20px;
+    }
+}
