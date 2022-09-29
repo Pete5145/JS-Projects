@@ -76,7 +76,7 @@ function validateNames(e) {
 
 // Validate Email;
 function validateEmail(e) {
-  const pattern = /[a-z0-9]{9,15}\@[a-z]{5}\.[a-z]{2,4}/gi;
+  const pattern = /[a-z0-9]{4,20}\@[a-z]{5}\.[a-z]{2,4}/gi;
   if (pattern.test(e.target.value)) {
     echeckIcon.style.visibility = "visible";
     e.target.style.borderColor = "green";
