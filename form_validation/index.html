@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Registration Form</h1>
+        <div class="submit-msg">
+            Form successfully submitted!
+            <i class="fa-regular fa-circle-check check-icon"></i>
+        </div>
+        <section>
+            <form action="#">
+                <!-- Firstname -->
+                <div class="firstname-box">
+                    <label for="fname">
+                        First name
+                    </label>
+                    <input type="text" name="fname" required id="fname">
+                    <i class="fa-regular fa-circle-check check-icon"></i>
+                    <i class="fa-solid fa-circle-exclamation warning-icon"></i>
+                    <p class="error"></p>
+                </div>
+                
+                <!-- Lastname -->
+                <div class="lastname-box">
+                    <label for="lname">
+                        Last name
+                    </label>
+                    <input type="text" name="lname" required id="lname">
+                    <i class="fa-regular fa-circle-check check-icon"></i>
+                    <i class="fa-solid fa-circle-exclamation warning-icon"></i>
+                    <p class="error"></p>
+                </div>
+                
+                <!-- Email -->
+                <div class="email-box">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input type="email" name="email" required id="email">
+                    <i class="fa-regular fa-circle-check check-icon"></i>
+                    <i class="fa-solid fa-circle-exclamation warning-icon"></i>
+                    <p class="error"></p>
+                </div>
+
+                <!-- Password -->
+                <div class="password-box">
+                    <label for="password">
+                        Password 
+                    </label>
+                    <input type="password" name="password" required id="password">
+                    <i class="fa-regular fa-eye-slash toggle"></i>
+                    <p class="error"></p>
+                </div>
+                    
+                <!-- Confirm password -->
+                <div class="confirmpass-box">    
+                    <label for="confirmpass">
+                        Confirm Password
+                    </label>
+                    <input type="password" name="confirmpass" required id="confirmpass">
+                    <i class="fa-regular fa-eye-slash toggle"></i>
+                    <p class="error"></p>
+                </div>
+                    
+                Agree terms and conditions
+                <label for="agree"><input type="checkbox" name="agree" required id="agree"> I agree to the Terms and Conditions</label> 
+
+                <!-- Signup -->
+                <input type="submit" id="submit" value="Sign Up">
+            </form>
+        </section> 
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
