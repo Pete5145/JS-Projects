@@ -13,6 +13,7 @@ const passwordCtrl = document.querySelector(".password-box");
 const confirmpassCtrl = document.querySelector(".confirmpass-box");
 const togglePassword = passwordCtrl.querySelector(".toggle");
 const toggleConfirmPass = confirmpassCtrl.querySelector(".toggle");
+const toggleBody = document.querySelector(".toggle-body");
 
 // Select all info texts
 const lerrorMsg = lastNameCtrl.querySelector(".error");
@@ -104,6 +105,7 @@ function toggleConfirmPassIcon() {
   type2 === "password"
     ? confirmpass.setAttribute("type", "text")
     : confirmpass.setAttribute("type", "password");
+  this.classList.toggle("fa-eye");
 }
 
 function validatePassword() {
@@ -127,3 +129,13 @@ function validateConfirmPass() {
     this.style.borderColor = "green";
   }
 }
+
+toggleBody.addEventListener("click", (e) => {
+  if (document.body.classList.contains("change-bg")) {
+    document.body.classList.remove("change-bg");
+  } else {
+    document.body.classList.add("change-bg");
+  }
+  e.target.style.transition = "all 2s ease";
+  e.target.classList.toggle("fa-toggle-on");
+});

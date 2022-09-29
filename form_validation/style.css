@@ -23,6 +23,15 @@ main {
     width: 50%; */
 }
 
+#flex {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+#flex > div {
+    display: none;
+}
+
 h1 {
     margin-bottom: 20px;
     text-align: center;
@@ -91,4 +100,25 @@ input[type=submit] {
 .submit-msg {
     color: rgb(40, 255, 40);
     display: none;
+}
+
+@media screen and (max-width: 526px) {
+    body {
+        background-color: #fff;
+        color: #1b1b32;
+    }
+
+    #flex div {
+        display: block;
+        font-size: 2rem;
+        position: absolute;
+        top: -20px;
+        right: -50px;
+        color: #000;
+    }
+}
+
+body.change-bg {
+    background-color: #1b1b32;
+    color: white;
 }
